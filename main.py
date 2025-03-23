@@ -20,6 +20,7 @@ def receive_webhook():
         writer = csv.writer(f)
         writer.writerow(data.keys())
         writer.writerow(data.values())
+        print(f"[LOG] Saved file: {filename}")
 
     return {"status": "ok", "saved": filename}, 200
 
